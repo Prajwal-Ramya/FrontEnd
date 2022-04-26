@@ -1,0 +1,347 @@
+@import url('https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css');
+.btn1{
+    border-radius:8px;
+    border-width: 0px;
+    background-color:#146eb4;
+    color:aliceblue;
+    margin:10px;
+    padding:5px;
+
+}
+.title{
+    font-family: cursive;
+    font-size:14px;
+}
+.price{
+    padding-left: 32%;  
+      font-size: 17px;
+    font-weight:600;
+    color:violet;
+    font-family:cursive;
+}
+.heading{
+    color:red;
+    text-align: center;
+    padding-left:35%;
+    font-family:beeserif;
+    font-weight:600;
+    font-size: 16px;
+}
+.list{
+    list-style-type:none;
+    color:black;
+    font-size:13px;
+    font-family:cursive;
+    padding-left:10px;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: lavender;
+}
+.nav-responsive{
+    display: flex;
+    position: fixed;
+    z-index: 1;
+    width: 100vw;
+    justify-content: space-between;
+    align-items: center;
+    background:rgb(128, 180, 248);
+    padding: 0.8rem 0rem;
+    margin-top: -5rem;
+}
+
+.logo{
+    width: 4rem;
+    height: 3rem;
+    border-radius: 50%;
+}
+.nav-search{
+    width: 50vw;
+    margin: 0 auto;
+    position: relative;
+    
+}
+#search{
+    margin: 0 auto;
+    width: 50vw;
+    outline: none;
+    font-size: 1.3rem;
+    padding:0.2rem 2rem 0.2rem 1rem;
+    border-radius: 1rem;
+    border: none;
+}
+#find{
+    position: absolute;
+    font-size: 1.3rem;
+    top: 0.3rem;
+    right: 0.5rem;
+    color: rgb(184, 140, 140);
+    background: transparent;
+}
+
+.access a{
+    color: rgb(73, 73, 70);
+    font-size: 20px;
+    padding:0 10px;
+}
+#notification{
+    position: relative;
+    top: -5px;
+}
+#cart{
+    position: relative;
+    top: -5px;
+}
+#bars{
+    padding:0 10px;
+    font-size: 30px;
+    margin-right: 1rem;
+}
+#account{
+    display: none;
+    margin-right: 1rem;
+}
+#account i{
+    font-size: 30px;
+}
+
+
+
+/* main section */
+#main{
+    margin-top: 5rem;
+}
+#categories{
+    margin: 0.5rem 0;
+    display: flex;
+    padding: 0.5rem 0.3rem;
+    background: lavender;
+}
+.brand{
+    width: 4rem;
+    text-align: center;
+    margin-right: 1rem;
+    cursor: pointer;
+}
+.img-container{
+    width: 4rem;
+    height: 4rem;
+    background: rgba(0, 128, 128, 0.278);
+    border-radius: 50%;
+    position: relative;
+}
+
+.brand-img{                                      
+    height:4.2rem;
+    width: 4.2rem;
+    position: relative;
+    top: -2.5px;
+    margin: auto;
+    text-align: center;
+}
+#brand-name{
+    font-family: sans-serif;
+    text-transform: capitalize;
+    margin-top: 10px;
+    color: teal;
+}
+.categories{
+    margin-top: 25px;
+    background-color:lavender;
+}
+.title-container{
+    display: flex;
+    justify-content: space-between;
+    background: white;
+    padding: 1rem 0.5rem;
+}
+#item-btn{
+    outline: none;
+    border: none;
+    background: rgb(126, 202, 228);
+    color: white;
+    padding: 0 0.5rem;
+    font-size: 1.2rem;
+    margin-right: 0.5rem;
+}
+#item-btn:active{
+    background: rgb(4, 167, 243);
+}
+#title{
+    font-size: 2rem;
+    background: white;
+}
+.card{
+    display: grid;
+    grid-template-columns: 
+    auto auto ;
+    grid-gap: 1px;
+    text-align: center;
+    font-family: sans-serif;
+}
+.item-container{
+    background: white;
+    position: relative;
+    background: white;
+    padding: 15px 12px;
+    position: relative;
+}
+.item-container:hover{
+    background: lavender;
+    transition: all 0.7s ease-in-out;
+}
+.item-container:hover #card-img{
+    transform: scale(1.1);
+    transition: all 0.7s ease-in-out;
+}
+.card-item{
+    cursor: pointer;
+}
+#card-img{
+    position: relative;
+    max-width: 100%;
+    max-height: 8rem;
+    text-align: center;
+    transition: all in linear;
+}
+#card-img:hover{
+ transform: scale(3.2);
+ z-index:2;
+ cursor: zoom-in;
+}
+#item-name{
+    text-align: left;
+    color: lightseagreen;
+    margin-top: 1rem;
+    font-size: 0.95rem;
+}
+#add-to-cart{
+    font-size: 1.5rem;
+    color: rgb(155, 85, 96);
+    position: absolute;
+    bottom: 1rem;
+    right: 0.8rem;
+    cursor: pointer;
+    opacity: 0;
+    
+}
+.item-container:hover #add-to-cart{
+    transition: all 0.7s ease-in-out;
+    opacity: 1;
+}
+
+#item-price{
+    color: rgb(199, 110, 110);
+    text-align: left;
+    margin-top: 0.5rem;
+}
+
+
+
+
+/* cart list section*/
+#cart-container{
+    display: none;
+    margin-top: 5rem;
+}
+#cart-title{
+    font-size: 3.5rem;
+    text-align: center;
+    font-family: sans-serif;
+    color: rgb(146, 78, 78);
+}
+#empty-cart{
+    display: none;
+    margin-top: 4rem;
+    text-align: center;
+    font-size: larger;
+}
+
+#cart-with-items{
+    display: none;
+    margin-top: 1rem;
+}
+
+.cart-column{
+    display: grid;
+    padding: 1rem;
+    grid-template-columns: repeat(5,1fr);
+}
+.cart-list{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    margin-top: 0.4rem;
+    position: relative;
+    padding:0.5rem 1rem;
+    background: white;
+}
+.list-name,.pay,.quantity,#remove{
+    padding: 1.2rem 0.2rem;
+}
+#list-img{
+    width: 5rem;
+    height: 5rem;
+}
+#total{
+    display: none;
+    position: relative;
+    margin-top: 3rem;
+    right: 1rem;
+    float: right;background: rgb(172, 191, 246);
+    font-family: monospace;
+    font-size: larger;
+    padding: 1rem;
+    color: rgb(149, 51, 34);
+    letter-spacing: 0.1rem;
+    margin-bottom: 1.5rem;
+}
+#you-saved{
+    color: rgb(101, 99, 102);
+}
+
+/* media queries for responsive view */
+@media only screen and (min-width : 800px){
+    .card{
+        grid-template-columns: repeat(4,1fr);
+    }
+    .footer{
+        grid-template-columns: auto auto auto;
+    }
+    #account{
+        display: inline;
+    }
+    #bars{
+        display: none;
+    }
+}
+
+@media only screen and (max-width : 800px){
+    .items-detail{
+        display: block;
+        width: 70vw;
+        height: 70vh;
+        padding: 0 4.5rem;
+    }
+    #details-img{
+        width: 8rem;
+        height: 9rem;
+    }
+    #detail-title{
+        font-size: 1.7rem;
+        margin-top: 0rem;
+    }
+    #detail-price,#delievery{
+        margin-top: 0.5rem;
+    }
+    #spec,.items-detail  ul{
+        display: none;
+    }
+    .image-container{
+        padding: 1rem;
+        margin-top: 1rem;
+    }
+}

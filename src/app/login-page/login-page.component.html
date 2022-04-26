@@ -1,0 +1,109 @@
+<div class="center-content">
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title class="card-title">Online Shopping Website</mat-card-title>
+        <mat-card-subtitle class="sub-title">Login/Register</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+      <mat-tab-group> 
+      <form #myForm1="ngForm">
+      <mat-tab label="Login">
+  
+      <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Username</mat-label>
+      <input matInput placeholder="Ex:Prodapt_123" value="" required ngModel name="username" #username="ngModel">
+      <mat-icon matSuffix> stay_current_portrait</mat-icon>
+      </mat-form-field>
+          
+      <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Password</mat-label>
+      <input matInput type="password" placeholder="Ex:Prodapt@123" value="" required ngModel name="Password" #Password="ngModel" pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&].{8,}"> 
+      <mat-error>Invalid Password</mat-error>
+      <mat-icon matSuffix>lock</mat-icon>
+      </mat-form-field>
+      <a routerLink="/homepage" style="text-decoration: none;">
+      <button  color="primary" type="submit" [disabled]="!myForm1.valid">Login</button>
+      </a>
+  
+  </mat-tab>
+      </form>
+    
+  
+          
+      <mat-tab label="Register"> 
+      <form [formGroup]="registerForm" (ngSubmit)="OnSubmit(registerForm.value)">
+      <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>First Name</mat-label>
+      <input type="text" matInput placeholder="Ex: Prodapt" formControlName="firstname" >
+      <mat-error
+              *ngIf="this.registerForm.get('firstname')?.touched && this.registerForm.get('firstname')?.hasError('required')">
+              First Name is required
+      </mat-error>
+      <mat-icon matSuffix>perm_identity</mat-icon>
+      </mat-form-field>
+          
+      <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Last Name</mat-label>
+        <input type="text" matInput placeholder="Last Name" formControlName="lastname">
+        <mat-error
+          *ngIf="this.registerForm.get('lastname')?.touched && this.registerForm.get('lastname')?.hasError('required')">
+          Last Name is required
+      </mat-error>
+        <mat-icon matSuffix>perm_identity</mat-icon>
+      </mat-form-field>
+  
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Mail Id</mat-label>
+        <input matInput placeholder="Ex: Prodapt123@gmail.com" formControlName="mailId" >
+        <mat-error *ngIf="this.registerForm.get('mailId')?.touched && this.registerForm.get('mailId')?.hasError('required')">
+          Email is required
+        </mat-error>
+        <mat-icon matSuffix>email</mat-icon>
+      </mat-form-field>
+  
+        <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>UserName</mat-label>
+        <input matInput placeholder="Ex:Prodapt_123" formControlName="UserName">
+        <mat-error
+              *ngIf="this.registerForm.get('UserName')?.touched && this.registerForm.get('UserName')?.hasError('required')">
+              Username is required
+        </mat-error>
+        <mat-icon matSuffix> stay_current_portrait</mat-icon>
+       </mat-form-field>
+    
+        <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Password</mat-label>
+        <input  type="password" matInput placeholder="Ex:We1c@me1" formControlName="Password">
+        <mat-error *ngIf="this.registerForm.get('Password')?.touched && this.registerForm.get('Password')?.hasError('required')"> Need one uppercase,one lowercase,one special character,one number,should have atleast 
+          a length of 8
+        </mat-error>
+        
+        <mat-icon matSuffix>lock</mat-icon>
+        </mat-form-field>
+    
+        <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>confirm Password</mat-label>
+        <input type="password" matInput placeholder="Ex:We1c@me1" formControlName="confirmPassword">
+        <mat-error 
+        *ngIf="this.registerForm.get('confirmPassword')?.touched && this.registerForm.get('confirmPassword')?.hasError('required')"> Password need to be match </mat-error>
+        <mat-icon matSuffix>lock</mat-icon>
+        </mat-form-field>
+        <mat-error
+            *ngIf="this.registerForm.get('confirmPassword')?.dirty && this.registerForm.hasError('passwordsNotMatching')">
+            Passwords are not matching!
+        </mat-error>
+        <div>
+          <button type="submit" mat-raised-button [disabled]="!registerForm.valid" color="primary" >
+            Register</button> 
+        </div>
+        
+    
+            
+           </form>
+           </mat-tab>
+        </mat-tab-group>
+      </mat-card-content>
+    </mat-card>
+    </div>
+  
+  

@@ -1,19 +1,40 @@
-
 <div class="bg-container">
-<h2 class="heading" >Your Cart</h2>
+  <h2 class="heading">Your Cart</h2>
 
-<table>
-  <tr>
-    <th class="text">Image </th>
-    <th class="text">Model</th>
-    <th class="text">Quantity</th>
-    <th class="text">Price</th>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Image</th>
+        <th scope="col">Model</th>
+        <th scope="col">Quantity</th>
+        <th scope="col">Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let cartItem of cartService.cartItems">
+        <td>
+          <img src="assets/imgs/{{cartItem.image}}" alt="{{cartItem.name}}" border=3 height=100 width=200>
+        </td>
+        <td>{{cartItem.brand}}</td>
+        <td>
+          <div>
+            <button class="btn btn-primary" (click)="cartService.updateCartItems(cartItem, 'remove')">-</button>
+            <span>{{cartItem.quantity}}</span>
+            <button class="btn btn-primary" (click)="cartService.updateCartItems(cartItem)">+</button>
+          </div>
+        </td>
+        <td>{{cartItem.quantity * cartItem.price}}</td>
+      </tr>
+    </tbody>
 
-  </tr>
-</table>
-<div class="button">
-<button class="btn1" routerLink="/homepage"> Go Back To Home</button>
-<button class="btn1">Procceed & Order</button>
+  </table>
 
-</div>
+  <div class="button">
+    <div class="total" *ngIf="cartService.cartItems.length > 1">
+      <h3>Total: {{cartService.totalAmount}}</h3>
+    </div>
+    <button class="btn1" routerLink="/homepage"> Go Back To Home</button>
+    <button class="btn1">Procceed & Order</button>
+
+  </div>
 </div>

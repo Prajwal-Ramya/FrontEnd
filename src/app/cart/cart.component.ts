@@ -1,4 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { AuthServiceService } from '../auth-service.service';
 import { CartService } from '../services/cart.service';
 
 @Component({
@@ -9,13 +11,20 @@ import { CartService } from '../services/cart.service';
 export class CartComponent implements OnInit {
 
   constructor(
-    public cartService: CartService
+    public cartService: CartService,
+    private http:HttpClient,
+    private authService:AuthServiceService
   ) { }
 
   ngOnInit(): void {
   }
   
+CartData(data:any){
+  this.authService.register(this.cartService.cartItems).subscribe(result=>{
+    console.log(result)
+  })
+   
 
-  
+}  
 
 }

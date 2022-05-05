@@ -34,7 +34,7 @@
       <h3>Total: {{cartService.totalAmount}}</h3>
     </div>
     <button class="btn1" routerLink="/homepage"> Continue Shopping</button>
-    <button class="btn1" routerLink="/checkout">Procceed & Order</button>
+    <button class="btn1" (click)="CartData(cartService.cartItems)" >Order</button>
 
   </div>
 </div>

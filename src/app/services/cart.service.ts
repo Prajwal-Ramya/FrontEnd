@@ -143,6 +143,7 @@ export class CartService {
 
     getCartItems() {
         return this.totalItems.asObservable();
+        
     }
 
     updateCartItems(item: any, action: string = 'add') {

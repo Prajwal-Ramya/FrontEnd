@@ -33,13 +33,20 @@ export class CartService {
         },
         {
             "id": 4,
+            "title": "Color:black Width:16.49cm Storage:256GB",
+            "brand": "Apple IPhone XR",
+            "price": 52999,
+            "image": "applexr.jpg"
+        },
+        {
+            "id": 5,
             "title": "Color:green Width:17.02cm Storage:256GB",
             "brand": "OnePlus 10 Pro",
             "price": 66999,
             "image": "oneplus10.jpg"
         },
         {
-            "id": 5,
+            "id": 6,
             "title": "Color:radiant Width:17.8cm Storage:256GB",
             "brand": "OnePlus 9RT",
             "price": 46999,
@@ -48,21 +55,28 @@ export class CartService {
         },
 
         {
-            "id": 6,
+            "id": 7,
             "title": "Color:blue Width:16.8cm Storage:256GB",
             "brand": "OnePlus Nord CE",
             "price": 24999,
             "image": "oneplusce.jpg"
         },
         {
-            "id": 7,
+            "id": 8,
+            "title": "Color:black Width:16.8cm Storage:256GB",
+            "brand": "OnePlus 7 Pro",
+            "price": 24999,
+            "image": "oneplus7pro.jpg"
+        },
+        {
+            "id": 9,
             "title": "Color:White Width:16.5cm Storage:64GB",
             "brand": "Oppo A5",
             "price": 16999,
             "image": "oppoa5.jpg"
         },
         {
-            "id": 8,
+            "id": 10,
             "title": "Color:Blue Width:16.5cm Storage:32GB",
             "brand": "Oppo A33",
             "price": 11999,
@@ -70,33 +84,48 @@ export class CartService {
         },
 
         {
-            "id": 9,
+            "id": 11,
             "title": "Color:Black Width:16.75cm Storage:64GB",
             "brand": "Oppo A7 Pro",
             "price": 16999,
             "image": "oppoa7.jpg"
         },
         {
-            "id": 10,
+            "id": 12,
+            "title": "Color:pink Width:16.75cm Storage:128GB",
+            "brand": "Oppo 8 Pro",
+            "price": 32999,
+            "image": "oppo8.jpg"
+        },
+        {
+            "id": 13,
             "title": "Color:white Width:16.02cm Storage:128B",
             "brand": "Samsung M32",
             "price": 14999,
             "image": "samsungm32.jpg"
         },
         {
-            "id": 11,
+            "id": 14,
             "title": "Color:black Width:17.8cm Storage:32GB",
             "brand": "Samsung A53",
             "price": 34999,
             "image": "samsunga53.jpg"
         },
         {
-            "id": 12,
+            "id": 15,
             "title": "Color:blue Width:16.8cm Storage:64GB",
             "brand": "Samsung A32",
             "price": 22999,
             "image": "samsunga32.jpg"
+        },
+        {
+            "id": 16,
+            "title": "Color:black Width:15.8cm Storage:128GB",
+            "brand": "Samsung S8",
+            "price": 28999,
+            "image": "samsungs8.jpg"
         }
+
 
     ];
     get applePhones() {

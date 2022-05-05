@@ -49,7 +49,10 @@
                     <div class="card-item">
                         <img src="assets/imgs/{{applePhone.image}}" id="card-img">
                         <p id="item-name">
-                            <span class="heading">{{applePhone.title}}</span>
+                            <span class="heading">{{applePhone.brand}}</span>
+                            </p>
+                            <p>
+                            <span class="list">{{applePhone.title}}</span>
                         </p>
                     </div>
                     <h3 id="item-price" class="price">Price :{{applePhone.price}}/-</h3>
@@ -74,7 +77,10 @@
                     <div class="card-item">
                         <img src="assets/imgs/{{onePlusPhone.image}}" id="card-img">
                         <p id="item-name">
-                            <span class="heading">{{onePlusPhone.title}}</span>
+                            <span class="heading">{{onePlusPhone.brand}}</span>
+                        </p>
+                        <p>
+                            <span class="list">{{onePlusPhone.title}}</span>
                         </p>
                     </div>
                     <h3 id="item-price" class="price">Price :{{onePlusPhone.price}}/-</h3>
@@ -97,8 +103,12 @@
                     <div class="card-item">
                         <img src="assets/imgs/{{oppoPhone.image}}" id="card-img">
                         <p id="item-name">
-                            <span class="heading">{{oppoPhone.title}}</span>
+                            <span class="heading">{{oppoPhone.brand}}</span>
                         </p>
+                        <p id="item-name">
+                            <span class="list">{{oppoPhone.title}}</span>
+                        </p>
+
                     </div>
                     <h3 id="item-price" class="price">Price :{{oppoPhone.price}}/-</h3>
                     <button class="btn1" [disabled]="isDisabled(oppoPhone)"
@@ -121,8 +131,12 @@
                     <div class="card-item">
                         <img src="assets/imgs/{{samsungPhone.image}}" id="card-img">
                         <p id="item-name">
-                            <span class="heading">{{samsungPhone.title}}</span>
+                            <span class="heading">{{samsungPhone.brand}}</span>
                         </p>
+                        <p id="item-name">
+                            <span class="list">{{samsungPhone.title}}</span>
+                        </p>
+
                     </div>
                     <h3 id="item-price" class="price">Price :{{samsungPhone.price}}/-</h3>
                     <button class="btn1" [disabled]="isDisabled(samsungPhone)"

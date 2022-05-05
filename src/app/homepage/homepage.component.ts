@@ -21,6 +21,6 @@ export class HomepageComponent implements OnInit {
   }
 
   public isDisabled(product: any) {
-    return this.cartService.cartItems.some(item => item.id === product.id);
+    return this.cartService.cartItems.some(item => item.id === product.id) || this.cartService.cartItems.length >= 3;
   }
 }

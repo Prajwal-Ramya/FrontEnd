@@ -13,7 +13,7 @@
     <tbody>
       <tr *ngFor="let cartItem of cartService.cartItems">
         <td>
-          <img src="assets/imgs/{{cartItem.image}}" alt="{{cartItem.name}}" border=3 height=100 width=200>
+          <img src="assets/imgs/{{cartItem.image}}" alt="{{cartItem.name}}"height=100 width=200>
         </td>
         <td>{{cartItem.brand}}</td>
         <td>
@@ -26,15 +26,16 @@
         <td>{{cartItem.quantity * cartItem.price}}</td>
       </tr>
     </tbody>
-
+    <tbody>
+      <div> 
+        <div class="total" *ngIf="cartService.cartItems.length > 1">
+          <h3>Total: {{cartService.totalAmount}}</h3>
+        </div>
+        <button class="btn1" routerLink="/homepage"> Continue Shopping</button>
+        <button class="btn1" (click)="CartData(cartService.cartItems)" >Order</button>
+    
+      </div>
+    </tbody>
+    
   </table>
 
-  <div class="button">
-    <div class="total" *ngIf="cartService.cartItems.length > 1">
-      <h3>Total: {{cartService.totalAmount}}</h3>
-    </div>
-    <button class="btn1" routerLink="/homepage"> Continue Shopping</button>
-    <button class="btn1" (click)="CartData(cartService.cartItems)" >Order</button>
-
-  </div>
-</div>

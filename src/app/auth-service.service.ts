@@ -9,7 +9,7 @@ export class AuthServiceService {
   constructor(private http:HttpClient) { }
    register(data:any):Observable<any>{
      console.log("I am Working")
-     return this.http.post('',data)
+     return this.http.post('localhost:8080/postOrder',data)
 
   }
 }
